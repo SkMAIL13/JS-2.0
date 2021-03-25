@@ -59,3 +59,6 @@ console.log(divS3);
 
 divS3 = document.querySelector('.s4');
 console.log(divS3);
+
+//Task-20
+//document.querySelector('body').innerHTML = '';
