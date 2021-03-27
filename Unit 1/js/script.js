@@ -1,7 +1,7 @@
-//Task-
+//Task-8
 //document.querySelector('.one').innerHTML = 'Hello World';
 
-//Task-
+//Task-9
 document.querySelector('span').innerHTML = 'world';
 
 //Task-10
