@@ -234,7 +234,16 @@ document.querySelector('.b-11').onclick = f11;
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
 function f12() {
+    let change12 = ar12[0];
+    let lastIndex = ar12.length - 1;
+    ar12[0] = ar12[lastIndex];
+    ar12[lastIndex] = change12;
 
+    let out = '';
+    for (i = 0; i < ar12.length; i++) {
+        out += ar12[i] + ' '; 
+    }
+    document.querySelector('.out-12').textContent = out;
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -251,7 +260,12 @@ document.querySelector('.b-12').onclick = f12;
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
+    let out = '';
 
+    for(i = 0; i < ar13.length; i++) {
+        out += i + ' ' + ar13[i] + ' ';
+    }
+    document.querySelector('.out-13').textContent = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -266,7 +280,12 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
+    let out = '';
 
+    for(i = ar14.length - 1; i >= 0; i--) {
+        out += ar14[i] + ' ';
+    }
+    document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -280,13 +299,24 @@ document.querySelector('.b-14').onclick = f14;
 let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
+    let out = '';
 
+    for(i = 0; i < ar15.length; i++) {
+        if( ar15[i] > 0) {
+            out += ar15[i] + ' ';
+        }
+    }
+    document.querySelector('.out-15').textContent = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
 
 // Task 16
-// Выполните перебор массива arr16. Четные элементы добавьте в массив ar16_even, нечетные в ar16_odd. Добавление в массив - по индексу, а не +=!!!!!. Протестируйте задачу на повторный запуск! Выведите ar16_odd в div.out-16-odd, а ar16_even в div.out-16-even. Разделитель - пробел.
+// Выполните перебор массива arr16. Четные элементы добавьте в массив ar16_even
+// нечетные в ar16_odd. 
+//Добавление в массив - по индексу, а не +=!!!!!. 
+//Протестируйте задачу на повторный запуск! 
+//Выведите ar16_odd в div.out-16-odd, а ar16_even в div.out-16-even. Разделитель - пробел.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-16
 // Вывод в out-16
@@ -295,14 +325,34 @@ let ar16 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 let ar16_odd = [];
 let ar16_even = [];
 
+for (let i  = 0; i < ar16.length; i++) {
+    if (ar16[i] % 2 == 0) {
+        ar16_even[ar16_even.length] = ar16[i]
+    }
+    else {
+        ar16_odd[ar16_odd.length] = ar16[i]
+    }
+}
+
 function f16() {
+    let outOdd = '';
+    for (let i = 0; i < ar16_odd.length; i++) {
+        outOdd += ar16_odd[i] + ' ';
+    }
+    document.querySelector('.out-16-odd').textContent = outOdd;
+
+    let outEven = '';
+    for (let i = 0; i < ar16_even.length; i++) {
+        outEven += ar16_even[i] + ' ';
+    }
+    document.querySelector('.out-16-even').textContent = outEven;
 
 }
 
 document.querySelector('.b-16').onclick = f16;
 
 // Task 17
-// Используя цикл выведите в .out-17 количество элементов ar17, значение которых больше 3. Для расчета используйте цикл и переменную счетчик.
+// Используя цикл выведите в .out-17 количество элем$ентов ar17, значение которых больше 3. Для расчета используйте цикл и переменную счетчик.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-17
 // Вывод в out-17
@@ -310,7 +360,14 @@ document.querySelector('.b-16').onclick = f16;
 let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
 function f17() {
+    let count = 0;
 
+    for (i = 0; i < ar17.length; i++ ) {
+        if(ar17[i] > 3) {
+            count += 1;
+        }
+    }
+    document.querySelector('.out-17').textContent = count;
 }
 
 document.querySelector('.b-17').onclick = f17;
@@ -325,7 +382,14 @@ document.querySelector('.b-17').onclick = f17;
 let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
 
 function f18() {
+    let max = ar18[0];
 
+    for(let i = 0; i < ar18.length; i++) {
+        if(ar18[i] > max) {
+            max = ar18[i];
+        }
+    }
+    document.querySelector('.out-18').textContent = max;
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -340,7 +404,14 @@ document.querySelector('.b-18').onclick = f18;
 let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
 
 function f19() {
+    let min = ar19[0];
 
+    for(let i = 0; i < ar19.length; i++) {
+        if(ar19[i] < min) {
+            min = ar19[i];
+        }
+    }
+    document.querySelector('.out-19').textContent = min;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -354,7 +425,11 @@ document.querySelector('.b-19').onclick = f19;
 let ar20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
-
+    let sum = 0;
+    for (i = 0; i < ar20.length; i++) {
+        sum += ar20[i];
+    }
+    document.querySelector('.out-20').textContent += sum;
 }
 
 document.querySelector('.b-20').onclick = f20;
