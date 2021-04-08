@@ -9,12 +9,12 @@ function showArr(domElem, arr) {
     document.querySelector(domElem).innerHTML = out;
 }
 
-let d1 = [33, 'best', 66, 'best'];
+let d1 = [33, 'best1', 66, 'best2'];
 
 function f1() {
-    /**
-     * ваш код здесь
-     */
+    let i1 = document.querySelector('.i-1');
+    d1.push(i1.value);
+
     showArr('.out-1', d1);
 }
 
@@ -25,6 +25,7 @@ document.querySelector('.b-1').onclick = f1;
 // функция выполняется при нажатии кнопки b-2
 
 function f2() {
+    d1.pop()
 
     showArr('.out-2', d1);
 }
@@ -36,6 +37,7 @@ document.querySelector('.b-2').onclick = f2;
 // функция выполняется при нажатии кнопки b-3
 
 function f3() {
+    d1.shift ()
 
     showArr('.out-3', d1);
 }
@@ -48,6 +50,8 @@ document.querySelector('.b-3').onclick = f3;
 
 
 function f4() {
+    let i4 = document.querySelector('.i-4');
+    d1.push(i4.value);
 
     showArr('.out-4', d1);
 }
@@ -59,6 +63,8 @@ document.querySelector('.b-4').onclick = f4;
 // функция выполняется при нажатии кнопки b-5
 
 function f5() {
+    let i5 = document.querySelector('.i-5');
+    d1.unshift(i5.value);
 
     showArr('.out-5', d1);
 }
