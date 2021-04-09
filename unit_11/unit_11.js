@@ -189,9 +189,21 @@ document.querySelector('.b-11').onclick = f11;
 // Вывод в out-12
 
 let d12 = [6, 62, 60, 70, 1, 5];
+let out12 = document.querySelector('.out-12');
+
 
 function f12() {
+    let input = document.querySelector('.i-12');
+    let inp12 = +input.value;
 
+    for(let i = 0; i < d12.length; i++) {
+            console.log(i);
+            console.log('[d12[i]]', d12[i]);
+            console.log('[inp12]', inp12);
+        if(inp12 == d12[i]) {out12.innerHTML = i; break}
+        else if (inp12 != d12[i]) {out12.innerHTML = '-1'}
+        console.log('[ou12.innerHTML]', out12.innerHTML);
+    }
 }
 
 document.querySelector('.b-12').onclick = f12;
