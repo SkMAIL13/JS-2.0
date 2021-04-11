@@ -350,6 +350,7 @@ function t15() {
       a += ' ' + (10 - b) + ' ' + b;
       b++;
    }
+   
    document.querySelector('.out-15').textContent = a
 }
 
