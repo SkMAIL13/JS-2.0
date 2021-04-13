@@ -17,8 +17,8 @@ document.querySelector('.b-1').onclick = f1;
 
 function f2() {
     let a2 = [[12, 'hi'], [45, 87], [55, 13]];
-
-    // return
+    document.querySelector('.out-2').innerHTML = a2[0][1]
+    return a2[0][1];
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -30,8 +30,8 @@ document.querySelector('.b-2').onclick = f2;
 
 function f3() {
     let a3 = [[1, 2, 3], [3, 4, 5], [6, [7, 'my']]];
-
-    // return
+    document.querySelector('.out-3').innerHTML = a3[2][1][1];
+    return a3[2][1][1];
 }
 
 document.querySelector('.b-3').onclick = f3;
@@ -43,8 +43,8 @@ document.querySelector('.b-3').onclick = f3;
 
 function f4() {
     let a4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
-
-    // return
+    document.querySelector('.out-4').innerHTML = a4[1];
+    return a4[1];
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -72,7 +72,11 @@ document.querySelector('.b-5').onclick = f5;
 function f6() {
     let out = '';
     let a6 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
-
+    for (let i = 0; i < a6.length; i++) {
+        if (a6[i][0] % 2 !== 0) out += a6[i][0] + ' ';
+        if (a6[i][1] % 2 !== 0) out += a6[i][1] + ' ';
+    }
+    document.querySelector('.out-6').innerHTML = out;
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -112,8 +116,12 @@ function f8() {
         [21, 34, 43],
         [44, 56]
     ];
-
-
+    for (let i = 0; i < a8.length; i++) {
+        for (let k = 0; k < a8[i].length; k++) {
+            if (a8[i][k] % 2 !== 0) out += a8[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-8').innerHTML = out;
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -130,8 +138,12 @@ function f9() {
         [21, -34, -43],
         [44, -56]
     ];
-
-
+    for (let i = 0; i < a9.length; i++) {
+        for (let k = 0; k < a9[i].length; k++) {
+            if (a9[i][k] > 0) out += a9[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-9').innerHTML = out;
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -148,6 +160,12 @@ function f10() {
         ['st', 21, -34, -43],
         [44, -56, 'task']
     ];
+    for (let i = 0; i < a10.length; i++) {
+        for (let k = 0; k < a10[i].length; k++) {
+            if (typeof a10[i][k] === 'string') out += a10[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -164,6 +182,12 @@ let a11 = [
 
 function f11() {
     let out = '';
+    for (let i = 0; i < a11.length; i++) {
+        for (let k = a11[i].length - 1; k >= 0; k--) {
+            out += a11[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -172,16 +196,24 @@ document.querySelector('.b-11').onclick = f11;
 // Дан массив a12 который моделирует шахматную доску. Используя цикл выведите в out-12 единицы из этого массива. Все действия в функции f12. Функция запускается при нажатии на b12. Вывод через пробел.
 
 function f12() {
+    let out = '';
     let a12 = [
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
+        [0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0],
+        [0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0],
+        [0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0],
+        [0, 1, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1, 0, 1, 0],
     ];
+    for (let i = 0; i < a12.length; i++) {
+        for (let k = 0; k < a12[i].length; k++) {
+            if (a12[i][k] > 0) out += a12[i][k] + ' ';
+        }
+        document.querySelector('.out-12').innerHTML = out;
+    }
+    document.querySelector('.out-12').innerHTML = out;
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -192,7 +224,19 @@ document.querySelector('.b-12').onclick = f12;
 let a13 = [];
 
 function f13() {
+    let arr = [];
+    for (let i = 0; i < 8; i++) {
+        arr[i] = [];
 
+        for (let k = 0; k < 8; k++) {
+            if ((i + k) % 2 == 0) {
+                arr[i][k] = 0
+            }
+            else arr[i][k] = 1;
+        }
+    }
+    a13 = arr;
+    console.log(a13);
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -203,10 +247,10 @@ document.querySelector('.b-13').onclick = f13;
 
 let a14 = [
     [],
-    [1,0],
-    [1,0,0,0],
-    [3,4,5,6,7,8],
-    [1,2]
+    [1, 0],
+    [1, 0, 0, 0],
+    [3, 4, 5, 6, 7, 8],
+    [1, 2]
 ];
 
 function f14() {
@@ -221,10 +265,10 @@ document.querySelector('.b-14').onclick = f14;
 
 let a15 = [
     [],
-    [1,0],
-    [1,0,0,0],
-    [3,4,5,6,7,8],
-    [1,2]
+    [1, 0],
+    [1, 0, 0, 0],
+    [3, 4, 5, 6, 7, 8],
+    [1, 2]
 ];
 
 function f15() {
@@ -238,7 +282,7 @@ document.querySelector('.b-15').onclick = f15;
 // Ответ в данной задаче прописан сразу. Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 let a16 = [
-    [0,7,0,6],
+    [0, 7, 0, 6],
     0,
     0,
     8
