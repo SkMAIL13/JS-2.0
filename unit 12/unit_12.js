@@ -254,7 +254,11 @@ let a14 = [
 ];
 
 function f14() {
-
+    let out = '';
+    for(let i = 0; i < a14.length; i++) {
+        out += a14[i].length + ' ';
+    }
+    document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
