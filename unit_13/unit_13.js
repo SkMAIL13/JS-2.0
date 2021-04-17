@@ -10,6 +10,7 @@ function f1() {
     };
     document.querySelector('.out-1').innerHTML = a1.two;
     //return ...
+    return a1.two;
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -26,8 +27,7 @@ function f2() {
         "two": "mahai",
         "five": "hi"
     };
-
-    // return
+    return a2.five;
 }
 
 document.querySelector('.b-2').onclick = () => {
@@ -49,7 +49,7 @@ function f3() {
         "odd": "hi",
         "mix": "mix"
     };
-    // return
+    return a3.odd;
 }
 
 document.querySelector('.b-3').onclick = () => {
@@ -71,8 +71,11 @@ let a4 = {
     "mix": "mix"
 };
 function f4() {
-
-    // return out;
+    let out = '';
+    for (const key in a4) {
+        out += key + ' ' + a4[key] + ' <br>';
+    }
+    return out;
 }
 
 document.querySelector('.b-4').onclick = () => {
@@ -87,8 +90,11 @@ function f5(arr, block) {
     let out = '';
     // цикл
     // формат вывода `${key} : ${arr[key]} <br>`;
-    //
+    for (const key in arr) {
+        out += `${key} : ${arr[key]} <br>`;
+    }
     // тут вывод в блок block
+    document.querySelector(block).innerHTML = out
 }
 
 // давайте протестируем f5
