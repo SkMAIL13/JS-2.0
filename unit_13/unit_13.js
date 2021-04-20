@@ -461,7 +461,15 @@ let a20 = {
 }
 
 function f20() {
-
+    let out = '';
+    for (const key in a20) {
+        for (let i = 0; i < a20[key].length; i++ ) {
+            if (a20[key][i][1] == 2) {
+                out += a20[key][i][0] + ' ' ;
+            }
+        }
+    }
+    document.querySelector('.out-20').textContent = out;
 }
 
 document.querySelector('.b-20').onclick = f20
