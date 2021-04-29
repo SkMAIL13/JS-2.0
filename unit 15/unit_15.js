@@ -109,23 +109,19 @@ document.querySelector('.b-7').onclick = f7;
 // Task 8
 // При нажатии b-8 выполняете функцию f8. Функция должна перебрать набор s8 и добавить в массив ar8 только числа больше 5. Выведите массив в консоль.
 
-let s8 = new Set([[1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]]);
+let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
 
-console.log('[s8]', s8);
-
-
-function f8() {
+const f8 = () => {
     let arr = Array.from(s8);
     let res8 = [];
-    for (let i = 0; i < arr[0].length; i++) {
-        if (arr[0][i] > 5) {res8.push(arr[0][i])} 
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 5) {res8.push(arr[i])} 
     }
-    return res8;
+    console.log(res8);    
 }
 
-document.querySelector('.b-8').onclick = () => {
-    console.log(f8());
-}
+document.querySelector('.b-8').onclick = f8
 
 // Task 9
 //  При нажатии b-9 выполняете функцию f9. Функция должна принимать набор our_set в качестве параметра, преобразовывать его в строку, причем после каждого символа строки должен быть пробел. Функция должна возвращать результирующую строку. 
@@ -197,11 +193,20 @@ let str13 = 'The name conjures up visions of plum pudding and Christmas punch qu
 
 
 const f13 = () => {
-    let arr = str13.split(' ');
+    let arr = str13.split('');
     let set = new Set(arr);
     let res13 = {};
 
-    return set;
+    for (const symbol of set) {
+        let count = 0;
+        for (let key of arr) {
+            if (symbol == key) {
+                count++
+            }
+        }
+        res13[symbol] = count;
+    }
+    return res13;
 }
 
 document.querySelector('.b-13').onclick = () => {
