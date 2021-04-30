@@ -4,7 +4,12 @@
 let a1 = [5,7,9, 11, 13, 15];
 
 function f1() {
+    let out = '';
 
+    for (let i = 0; i < a1.length; i++) {
+        out += a1[i] + ' ';
+    }
+    document.querySelector('.out-1').textContent = out;
 }
 
 document.querySelector('.b-1').addEventListener('click', f1);
