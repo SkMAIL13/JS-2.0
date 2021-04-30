@@ -20,7 +20,11 @@ document.querySelector('.b-1').addEventListener('click', f1);
 let a2 = [5,7,9, 11, 13, 15];
 
 function f2() {
-
+    let out = '';
+    for(let i = 0; i < a2.length; i++) {
+        out += `${i} ${a2[i]} `;
+    }
+    document.querySelector('.out-2').textContent = out;
 }
 
 document.querySelector('.b-2').addEventListener('click', f2);
@@ -29,7 +33,11 @@ document.querySelector('.b-2').addEventListener('click', f2);
 //При нажатии .b-3 выполняете функцию f3. Функция получает div.out-3 со страницы с помощью getElementsByClassName и в каждый записывает число 3, перезаписывая содержимое div.
 
 function f3() {
-
+    let divOut = document.getElementsByClassName('out-3');
+    
+    for (const iterator of divOut) {
+        iterator.textContent = 3;
+    }
 }
 
 document.querySelector('.b-3').addEventListener('click', f3);
