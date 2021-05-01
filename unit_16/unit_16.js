@@ -101,7 +101,12 @@ document.querySelector('.b-6').addEventListener('click', f6);
 let a7 = [{ id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
 
 function f7() {
+    let obj = {};
 
+    for (const item of a7) {
+        obj[item.id] = item.name;
+    }
+    return obj
 }
 
 document.querySelector('.b-7').addEventListener('click', ()=>{
@@ -115,7 +120,12 @@ document.querySelector('.b-7').addEventListener('click', ()=>{
 let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
 
 function f8() {
+    let a = [];
+    for (const item of a8) {
+        a.push(item.id);
+    }
 
+    return a
 }
 
 document.querySelector('.b-8').addEventListener('click', ()=>{
