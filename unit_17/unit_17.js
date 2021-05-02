@@ -66,8 +66,8 @@ document.querySelector('.b-3').onclick = () => {
 let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t4() {
-    a4_res = a4.map(elem => {
-        if (typeof elem == 'number') {return elem}
+    a4.map(elem => {
+        if (typeof elem == 'number') {a4_res.push(elem)}
     })
     return a4_res
 }
@@ -135,7 +135,10 @@ document.querySelector('.b-7').onclick = () => {
 let b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t8() {
-
+    b8_res = b8.filter(function (item, index) {
+        if(item % 2 == 0) {return index}
+    })
+    return b8_res
 }
 
 document.querySelector('.b-8').onclick = () => {
@@ -150,8 +153,8 @@ document.querySelector('.b-8').onclick = () => {
 let b9 = [3, "hello", 4, "world", 5, "hi"];
 
 function t9() {
-
-    return [b9_num, b9_string];
+    b9_string = b9.filter(item => typeof item === 'string')
+    return b9_string;
 }
 
 document.querySelector('.b-9').onclick = () => {
@@ -166,8 +169,8 @@ document.querySelector('.b-9').onclick = () => {
 let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]]
 
 function t10() {
-
-
+    b10_res = b10.filter(item => item.includes(3))
+    return b10_res
 }
 
 document.querySelector('.b-10').onclick = () => {
