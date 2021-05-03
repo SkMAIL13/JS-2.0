@@ -19,7 +19,12 @@ document.querySelector('.b-1').onclick = t1;
 запускаться при вызове функции t2.*/
 
 function t2() {
+    let a1 = [2,3,4,5,10,11,12];
 
+    a1.forEach(elem => {
+        a2_res.push(elem / 2)
+    });
+    document.querySelector('.out-2').textContent = a2_res
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -29,7 +34,14 @@ document.querySelector('.b-2').onclick = t2;
 /*  Дан массив a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'] - с помощью forEach переберите массив и создайте новый массив a3_res куда добавьте элементы данного массива являющиеся числом. Запускаться решение должно при вызове функции t3.*/
 
 function t3() {
+    let a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'];
 
+    a3.forEach(elem => {
+       if(typeof elem == 'number') {
+           a3_res.push(elem)
+       }
+    })
+    document.querySelector('.out-3').textContent = a3_res
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -39,7 +51,13 @@ document.querySelector('.b-3').onclick = t3;
 /*  На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и добавьте атрибуты в массив a4_res  Запускаться решение должно при вызове функции t4.*/
 
 function t4() {
+    let span = document.querySelectorAll('span');
 
+    span.forEach(elem => {
+        let attribute = elem.getAttribute('data');
+        a4_res.push(attribute)
+    })
+    document.querySelector('.out-4').textContent = a4_res
 }
 
 document.querySelector('.b-4').onclick = t4;
