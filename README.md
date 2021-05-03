@@ -17,3 +17,4 @@ JavaScript 2.0 Course. Tasks from Course Алексея Лущенко
 14. Прогноз погоды по  api
 15. Set
 16. Перебор массива for, for in, for of
+17. Методы массивов map, filter
