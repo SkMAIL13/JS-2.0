@@ -150,7 +150,8 @@ function t10() {
 
     let out = '';
     for(const elem in a10){
-        out += elem + '=' + a10[elem] + '&' ;
+        out += `${elem} = ${a10[elem]} &`
+        //out += elem + '=' + a10[elem] + '&' ;
     }
     document.querySelector('.out-10').textContent = out
 }
