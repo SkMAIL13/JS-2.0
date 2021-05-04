@@ -67,7 +67,13 @@ document.querySelector('.b-4').onclick = t4;
 /*  На странице созданы 3 p.task-5 c атрибутом data. С помощью forEach переберите их и добавьте событие клик. Напишите функцию t5, которая будет запускаться при клике и добавлять атрибут data элемента, по которому кликнули в массив a5_res.*/
 
 function t5() {
+    let p = document.querySelectorAll('p');
 
+    p.forEach(elem => {
+        let attribute5 = elem.getAttribute('data');
+        a5_res.push(attribute5)
+    })
+    document.querySelector('.out-5').textContent = a5_res
 }
 
 document.querySelectorAll('.task-5').forEach(elem => {
@@ -80,7 +86,9 @@ document.querySelectorAll('.task-5').forEach(elem => {
 /*  Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. Выведите на страницу. Запускаться решение должно при вызове функции t6. */
 
 function t6() {
+    let str6 = 'helloworld';
 
+    document.querySelector('.out-6').textContent = str6.split('')
 }
 
 document.querySelector('.b-6').onclick = t6;
