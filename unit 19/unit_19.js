@@ -3,19 +3,26 @@
 /* Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в out-1.  */
 
 function t1() {
+   let text = this.textContent;
+   document.querySelector('.out-1').textContent = text;
+   return text;
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-1').addEventListener('click', t1);
 
 // Task 2 ============================================
 /*  Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна возвращать true или false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также, выводите на экран результат. Вывод осуществляется в out-2. */
 
-function t2() {
+function t2(e) {
+   let alt = e.altKey;
 
+   document.querySelector('.out-2').textContent = alt;
+   return alt;
 }
 
 // ваше событие здесь!!!
-
+document.querySelector('.div-2').addEventListener('click', t2)
 
 // Task 3 ============================================
 /*  Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px. Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. */
@@ -23,35 +30,41 @@ function t2() {
 let w3 = 75;
 
 function t3() {
-
+   document.querySelector('.div-3').style.width = w3 + 'px';
+   w3 = w3 + 5
 }
 
 // ваше событие здесь!!!
-
+document.querySelector('.div-3').addEventListener('click', t3)
 
 // Task 4 ============================================
 /*  Добавьте на блок .div-4 событие двойной клик и по двойному клику запуск функции t4. Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в out-4. */
 
 function t4() {
+   let text = this.textContent;
 
+   document.querySelector('.out-4').textContent = text;
+   return text;
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-4').addEventListener('dblclick', t4);
 
 // Task 5 ============================================
 /*  Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому удалется класс active если он есть и добавляется если такого класса нет. */
 
 function t5() {
-
+   document.querySelector('.div-5').classList.toggle('active');
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-5').addEventListener('dblclick', t5)
 
 // Task 6 ============================================
 /*  Дан блок .div-6 и список .ul-6. При двойном клике на блоке скрывайте .ul-6 еcли он показан и показывайте если скрыт. Скрытие и показ делайте через добавление - удаление класса .hide */
 
 function t6() {
-
+   
 }
 
 // ваше событие здесь!!!
@@ -130,10 +143,10 @@ function t11() {
 // Task 14 ============================================
 /*  Дан блок .div-14. При нажатии кнопки b-14 добавляйте к нему событие onclick - которое, при клике добавляем блоку div-14 класс active. */
 
-function t14() {
+//function t14() {
 
-}
-document.querySelector('t-14').onclick = t14;
+//}
+//document.querySelector('t-14').onclick = t14;
 
 
 // Task 15 ============================================
