@@ -52,30 +52,44 @@ input3.addEventListener('keypress', t3)
 // Task 4 ============================================
 /*  Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е. ввели ab4Bci в out получаем ab4bci. */
 
-function t4() {
+let input4 = document.querySelector('.i-4');
 
+function t4() {
+    let out = input4.value.toLowerCase();
+    
+    document.querySelector('.out-4').textContent = out;
 }
 
 // ваше событие здесь!!!
+input4.addEventListener('input', t4)
 
 // Task 5 ============================================
 /*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */
 
-function t5() {
+let input5 = document.querySelector('.i-5');
 
+function t5() {
+    let out = input5.value.toUpperCase();
+
+    document.querySelector('.out-5').textContent = out
 }
 
 // ваше событие здесь!!!
+input5.addEventListener('input', t5)
 
 // Task 6 ============================================
 /*  Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре.  */
 
-function t6() {
+let input6 = document.querySelector('.i-6');
 
+function t6() {
+    let lowerCase = input6.value.toLowerCase();
+
+    input6.value = lowerCase;
 }
 
 // ваше событие здесь!!!
-
+input6.addEventListener('input', t6)
 
 // Task 7 ============================================
 /*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом вводе символа. */
