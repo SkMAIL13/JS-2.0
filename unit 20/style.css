@@ -22,3 +22,7 @@ section {
 .hide {
     display: none;
 }
+
+.button-numbers {
+    padding-top: 5px;
+}
