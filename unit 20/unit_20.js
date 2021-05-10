@@ -171,9 +171,16 @@ input10.addEventListener('keydown', t10)
 4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются. Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.
 */
 
-function t11() {
+const buttonCollection = document.querySelectorAll('.key');
+const input11 = document.querySelector('.i-11');
 
+function t11(event) {
+    buttonCollection.forEach((element) => {
+        element.classList.remove('active');
+    });
+    document.querySelector(`.key[data-key="${event.keyCode}"]`).classList.add('active');
 }
 
 // ваше событие здесь!!!
-
+input11.onkeyup = t11;
+input11.onkeydown = t11;
