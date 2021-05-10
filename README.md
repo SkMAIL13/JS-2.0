@@ -20,3 +20,4 @@ JavaScript 2.0 Course. Tasks from Course Алексея Лущенко
 17. Методы массивов map, filter
 18. Методы массивов: join, split, forEach
 19. События мыши
+20. События клавиатуры
