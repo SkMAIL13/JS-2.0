@@ -118,20 +118,54 @@
 
         <section>
             <p><b>Task 11.</b></p>
-            <p> 1. Выполните в html верстку клавиш клавиатуры. Сверстайте – блок цифровых клавиш от 1 до 0. И ряд клавиш q – p. Добавьте
-            клавишу левый shift, левый alt, левый ctrl, пробел, enter.</p>
-            <p>2. Добавьте на input .i-11 событие onkeypress или onkeyup или onkeydown ( по вашему выбору). Когда событие происходит (
-            ввод символа в input) необходимо подсветить ( добавить класс active) клавише с таким символом. Со всех остальных клавиш
-            – удалить класс active.</p>
-            <p>3. Если вводится следующий символ – повторить удаление active и подсветить клавишу с введенным символом.</p>
-            <p>4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются.
-            Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.</p>
+            <p> 1. Выполните в html верстку клавиш клавиатуры. Сверстайте – блок цифровых клавиш от 1 до 0. И ряд клавиш
+                q – p. Добавьте
+                клавишу левый shift, левый alt, левый ctrl, пробел, enter.</p>
+            <p>2. Добавьте на input .i-11 событие onkeypress или onkeyup или onkeydown ( по вашему выбору). Когда
+                событие происходит (
+                ввод символа в input) необходимо подсветить ( добавить класс active) клавише с таким символом. Со всех
+                остальных клавиш
+                – удалить класс active.</p>
+            <p>3. Если вводится следующий символ – повторить удаление active и подсветить клавишу с введенным символом.
+            </p>
+            <p>4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не
+                тестируются.
+                Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.</p>
 
             <div>
 
                 <input type="text" class="i-11">
-                <div class="out-11">
-                </div>
+                <div class="buttons">
+                    <div class="keyboard">
+                        <button class="key" data-key="49">1</button>
+                        <button class="key" data-key="50">2</button>
+                        <button class="key" data-key="51">3</button>
+                        <button class="key" data-key="52">4</button>
+                        <button class="key" data-key="53">5</button>
+                        <button class="key" data-key="54">6</button>
+                        <button class="key" data-key="55">7</button>
+                        <button class="key" data-key="56">8</button>
+                        <button class="key" data-key="57">9</button>
+                        <button class="key" data-key="48">0</button>
+                        <br>
+                        <button class="key" data-key="81">q</button>
+                        <button class="key" data-key="87">w</button>
+                        <button class="key" data-key="69">e</button>
+                        <button class="key" data-key="82">r</button>
+                        <button class="key" data-key="84">t</button>
+                        <button class="key" data-key="89">y</button>
+                        <button class="key" data-key="85">u</button>
+                        <button class="key" data-key="73">i</button>
+                        <button class="key" data-key="79">o</button>
+                        <button class="key" data-key="80">p</button>
+
+                        <button class="key left-shift" data-key="16">Left shift</button>
+                        <button class="key left-alt" data-key="18">Leftalt</button>
+                        <button class="key left-ctrl" data-key="17">Leftctrl</button>
+                        <button class="key enter" data-key="13">Enter</button>
+                        <button class="key space" data-key="32">Space</button>     
+                    </div>
+                    <div class="out-11"></div>
         </section>
 
 
