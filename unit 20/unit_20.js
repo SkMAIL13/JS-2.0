@@ -94,41 +94,74 @@ input6.addEventListener('input', t6)
 // Task 7 ============================================
 /*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом вводе символа. */
 
-function t7() {
-    const a7 = [];
+let input7 = document.querySelector('.i-7');
 
+function t7() {
+    const a7 = ['A', 's', 'z', 'q', 'w', 'e', 'r', 't', 'y'];
+
+    function arrayRandElement(arr) {
+        let rand = Math.floor(Math.random() * arr.length);
+        return arr[rand];
+    };
+
+    let symbol = arrayRandElement(a7);
+    document.querySelector('.out-7').textContent += symbol;
 }
 
 // ваше событие здесь!!!
+input7.addEventListener('input', t7);
 
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
 
-function t8() {
+let input8 = document.querySelector('.i-8');
+let mass = [];
 
+function t8() {
+    if(input8.value == 'i') {mass.push(1)}
+    else if(input8.value == 'o') {mass.push(0)}
+    else if(input8.value == 'l') {mass.push(7)}
+    else {mass.push(a)}
+    input8.value = '';
+
+    document.querySelector('.out-8').textContent = mass
 }
 
 // ваше событие здесь!!!
-
+input8.addEventListener('input', t8)
 
 // Task 9 ============================================
-/* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз. */
+/* Дан input .i-9. Напишите функцию t9, выводит в .out-9 количество нажатых клавиш стрелка вниз. */
 
-function t9() {
+let input9 = document.querySelector('.i-9');
 
+function t9(e) {
+    let count = 0;
+
+    if (e.keyCode == 40) {count++}
+
+    document.querySelector('.out-9').textContent = count++;
 }
 
 // ваше событие здесь!!!
-
+input9.addEventListener('keydown', t9);
 
 // Task 10 ============================================
 /*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */
 
-function t10() {
+let input10 = document.querySelector('.i-10');
 
+function t10(event) {
+    //console.log(e.keyCode)
+    w3++;
+    let img = document.querySelector('.div-10').querySelector('img');
+
+    if(event.keyCode == 38 || event.keyCode == 40) {img.style.height = w3 + 'px' }
+    else if(event.keyCode == 37 || event.keyCode == 39) {img.style.width = w3 + 'px'}
 }
 
 // ваше событие здесь!!!
+input10.addEventListener('keydown', t10)
 
 // Task 11 ============================================
 /*  Проект. 
