@@ -171,19 +171,60 @@ div11.addEventListener('touchstart', t11)
 const images = document.querySelectorAll('.img-12-min');
 let count = 0; // переменная, которая указывает на номер активного изображения в images
 
-const next = document.querySelectorAll('.next');
+const next = document.querySelector('.next');
 next.onclick = nextFunction;
 
-const prev = document.querySelectorAll('.prev');
+const prev = document.querySelector('.prev');
 prev.onclick = prevFunction;
 
-function nextFunction() {
+const reset = document.querySelector('.reset');
+reset.onclick = resetFunction;
 
-}
+let imgMax = document.querySelector('.img-12-max');
+
+function nextFunction() {
+   count++;
+   if (count == images.length) {
+     count = 0;
+   }
+   for (i = 0; i < images.length; i++) {
+     if (images[i].classList.contains('active-img')) {
+       images[i].classList.remove('active-img');
+     }
+   }
+   images[count].classList.add('active-img');
+ 
+   let imgMin = images[count].getAttribute('src');
+   imgMax.setAttribute('src', imgMin);
+ }
 
 function prevFunction() {
+   count--;
+   if (count < 0) {
+      count = images.length -1;
+   }
+   for ( i = 0; i < images.length; i++) {
+      if( images[i].classList.contains('active-img') ) {
+         images[i].classList.remove('active-img')
+      }
+   }
+   images[count].classList.add('active-img');
 
+   let imgMin = images[count].getAttribute('src');
+   imgMax.setAttribute('src', imgMin)
 }
 
+function resetFunction() {
+   count = 0;
+   imgMax.setAttribute('src', 'img/1.png');
+   
+   for (let i of images) {
+      if ( i.classList.contains('active-img') ) {
+         i.classList.remove('active-img')
+      }
+   }
+   images[count].classList.add('active-img')
+}
 
 // ваше событие здесь!!!
+
