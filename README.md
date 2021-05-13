@@ -22,3 +22,4 @@ JavaScript 2.0 Course. Tasks from Course Алексея Лущенко
 19. События мыши
 20. События клавиатуры
 21. События touch
+22. Обработка ошибок Try/ catch
