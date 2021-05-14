@@ -24,3 +24,4 @@ JavaScript 2.0 Course. Tasks from Course Алексея Лущенко
 21. События touch
 22. Обработка ошибок Try/ catch
 23. Local Storage
+24. POST/ GET запросы
