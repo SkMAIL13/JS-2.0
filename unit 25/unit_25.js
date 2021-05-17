@@ -308,7 +308,15 @@ document.querySelector('.b-17').onclick = t17
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-18 результат. Запускаться функция должна по нажатию b-18. */
 
 function t18() {
-   
+   let xhttp2 = new XMLHttpRequest();
+   xhttp2.onreadystatechange = function () {
+      if(this.readyState == 4 && this.status == 200) {
+         myfunc('.out-18', this.responseText)
+      }
+   }
+   xhttp2.open('POST', 'http://getpost.itgid.info/index2.php?auth=DdC33D7d2C2a7&action=9&m=1&d=1&y=1');
+   xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+   xhttp2.send('auth=DdC33D7d2C2a7&action=9&m=1&d=1&y=1')
 }
 
 // ваше событие здесь!!!
