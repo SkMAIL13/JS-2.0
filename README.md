@@ -25,3 +25,4 @@ JavaScript 2.0 Course. Tasks from Course Алексея Лущенко
 22. Обработка ошибок Try/ catch
 23. Local Storage
 24. POST/ GET запросы
+25. AJAX - асинхронный JavaScript
