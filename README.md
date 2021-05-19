@@ -27,3 +27,4 @@ JavaScript 2.0 Course. Tasks from Course Алексея Лущенко
 24. POST/ GET запросы
 25. AJAX - асинхронный JavaScript
 26. Fetch на практике
+27. Promise
