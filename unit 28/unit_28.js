@@ -12,13 +12,15 @@
  
  //Task 3.
  //  Добавьте в класс Goods метод draw, который будет выводить div с изображением, названием товара, ценой - в указанный элемент (дозапись).
- let goods = new Goods('VAZ_2101', "6000", 'commute');
- goods.draw('.out-4')
- console.log(goods);
+// let goods = new Goods('Cars', "6000", 'commute');
+// goods.draw('.out-4')
+// console.log(goods);
  
  // Task 4.
  // Создайте на основе класса Goods объект goods2, заполните свойства, примените метод draw для вывода товара на страницу в блок out-4.
 
+ let goods2 = new Goods('Cars', '1000');
+ goods2.draw('.out-4')
 
  //Task 5.
  // Создайте класс Goods2, который наследуется от Goods. Добавьте ему свойство sale равное true или false. Перезапишите метод draw так, чтобы он выводил информацию о распродажах.
