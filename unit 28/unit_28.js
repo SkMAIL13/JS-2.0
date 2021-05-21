@@ -1,33 +1,37 @@
  // Task 1
  // Создайте класс Goods. Класс должен содержать свойства name, amount. Создайте на его основе объект goods. Выведите в консоль созданный объект. Помните, все классы - в отдельных файлах. Имена классов с большой буквы.
 
-// let goods = new Goods('CARS', 100);
-  // console.log(goods);
+// let goods = new Goods;
+// console.log(goods);
 
  //Task 2.
  //  Добавьте в класс Goods свойства image и count - картинка и количество на складе.
-// let goods = new Goods('CARS', 100);
+
+// let goods = new Goods('car', 10, 'directions_car');
   // console.log(goods);
 
  
  //Task 3.
  //  Добавьте в класс Goods метод draw, который будет выводить div с изображением, названием товара, ценой - в указанный элемент (дозапись).
-// let goods = new Goods('Cars', "6000", 'commute');
-// goods.draw('.out-4')
-// console.log(goods);
- 
+
+// let goods = new Goods('car', 10, 'directions_car');
+// goods.draw() 
+
  // Task 4.
  // Создайте на основе класса Goods объект goods2, заполните свойства, примените метод draw для вывода товара на страницу в блок out-4.
 
- let goods2 = new Goods('Cars', '1000');
- goods2.draw('.out-4')
+// let goods2 = new Goods('car', 2, 'directions_car', 10, 700, '.out-4');
+//goods2.draw();
 
  //Task 5.
  // Создайте класс Goods2, который наследуется от Goods. Добавьте ему свойство sale равное true или false. Перезапишите метод draw так, чтобы он выводил информацию о распродажах.
+
   
 
  // Task 6.
  // Создайте на основе класса Goods2 объект goods3. Заполните все поля. Выведите товар на страницу с помощью метода draw. Вывод осуществить в out-6.
+ let goods3 = new Goods2('car', 2, 'directions_car', 10, 700, '.out-6', false);
+goods3.draw();
 
 
  // Task 7.
