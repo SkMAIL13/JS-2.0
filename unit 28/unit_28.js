@@ -1,14 +1,14 @@
  // Task 1
  // Создайте класс Goods. Класс должен содержать свойства name, amount. Создайте на его основе объект goods. Выведите в консоль созданный объект. Помните, все классы - в отдельных файлах. Имена классов с большой буквы.
 
-// let goods = new Goods;
+// let goods = new Goods; 
 // console.log(goods);
 
  //Task 2.
  //  Добавьте в класс Goods свойства image и count - картинка и количество на складе.
 
-// let goods = new Goods('car', 10, 'directions_car');
-  // console.log(goods);
+ let goods = new Goods('car', 10, 'directions_car');
+   console.log(goods);
 
  
  //Task 3.
@@ -22,6 +22,7 @@
 
 // let goods2 = new Goods('car', 2, 'directions_car', 10, 700, '.out-4');
 //goods2.draw();
+//console.log(goods2);
 
  //Task 5.
  // Создайте класс Goods2, который наследуется от Goods. Добавьте ему свойство sale равное true или false. Перезапишите метод draw так, чтобы он выводил информацию о распродажах.
@@ -30,7 +31,7 @@
 
  // Task 6.
  // Создайте на основе класса Goods2 объект goods3. Заполните все поля. Выведите товар на страницу с помощью метода draw. Вывод осуществить в out-6.
- let goods3 = new Goods2('car', 2, 'directions_car', 10, 700, '.out-6', false);
+ let goods3 = new Goods2('car', 2, 'directions_car_filled', 10, 700, '.out-6', false);
 goods3.draw();
 
 
@@ -40,7 +41,9 @@ goods3.draw();
  
  //Task 8.
  // Создайте объект на основе класса Valid и задайте ему имя и пароль длиной 5 символов. Запустите метод validate() и выведите в консоль свойство isValid.
-  
+ let user = new Valid('12345', '12345');
+ user.validate();
+ console.log(user.isValid);
  
  //Task 9.
  // Создайте объект на основе класса Valid и задайте ему имя и пароль длиной 7 символов. Запустите метод validate() и выведите в консоль свойство isValid.
