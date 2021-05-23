@@ -28,3 +28,4 @@ JavaScript 2.0 Course. Tasks from Course Алексея Лущенко
 25. AJAX - асинхронный JavaScript
 26. Fetch на практике
 27. Promise
+28. ООП в ES6
