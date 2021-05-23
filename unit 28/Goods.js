@@ -8,8 +8,8 @@ class Goods {
      this.out = out;
   }
   draw() {
-      document.querySelector(this.out).textContent += `<div><span class="material-icons">
+      document.querySelector(this.out).innerHTML += `<div><span class="material-icons">
       ${this.image}
-      </span>${this.name}<br>total-priсe<strong>${this.amount * this.price}</strong>`;
+      </span>${this.name}<br>total-prise  <strong>${this.amount*this.price}</strong>`;
   }
 }
