@@ -49,15 +49,20 @@ goods3.draw();
  // Создайте объект на основе класса Valid и задайте ему имя и пароль длиной 7 символов. Запустите метод validate() и выведите в консоль свойство isValid.
  let user9 = new Valid('1234567', '1234567');
  user9.validate();
- console.log((user9.isValid))
+ console.log(user9.isValid)
  
  //Task 10.
  // Унаследуйтесь от класса Valid и создайте класс Valid2. Расширьте его свойствами emaiError, passwordError. По умолчанию, они равны пустой строке. Перезапишите метод validate(), помимо проверки пароля, он должен содержать еще проверку свойства email на пустоту. Если поле email пустое - то isValid - false. Также, в случае ошибки валидации в поле emailError пишется сообщение ‘email empty’, в поле passwordError - ‘min length 6’.
  
+ 
  //Task 11.
  // Создайте на основе класса Valid2 объект valid2 и задайте пустой емейл и длину пароля больше 7. Запустите метод validate(). Выведите объект в консоль.
-  
+  let valid2 = new Valid2('', '01234567');
+  valid2.validate();
+  console.log(valid2);
  
  //Task 12.
  // Создайте на основе класса Valid2 объект valid3 и задайте не пустой емейл и длину пароля больше 7. Запустите метод validate(). Выведите объект в консоль.
-  
+ let valid3 = new Valid2('example@gmail.com', '01234567');
+ valid3.validate();
+ console.log(valid3);
