@@ -1,9 +1,8 @@
 class Valid {
-   constructor (email, password, isValid, validate) {
+   constructor (email, password, isValid, ) {
       this.email = email;
       this.password = password;
-      this.isValid = isValid;
-      this.validate = false;
+      this.isValid = false;
    }
    validate() {
       if (this.password.length < 6) {this.isValid = false}
